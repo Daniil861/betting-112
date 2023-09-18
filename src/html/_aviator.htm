@@ -1,0 +1,88 @@
+<div class="wrapper__game game">
+	<div class="game__body">
+		<div class="game__content">
+			<div class="game__header header">
+				<div class="header__body">
+					<button type="button" data-button="game-home" class="header__button-home button _fz-16 _upper">
+						<span>Menu</span>
+					</button>
+					<div class="header__score-box score-box">
+						<div class="score-box__body">
+							<div class="score-box__icon icon-game"></div>
+							<div class="score-box__score score _fz-12">0</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="game__field field">
+				<div class="field__body">
+					<div class="field__coeff">0m</div>
+					<div data-hero class="field__airplane">
+						<img src="@img/shop/shop-1.png" alt="Image">
+						<div class="field__pin"></div>
+					</div>
+					<div class="field__loader">
+						<img src="@img/icons/cloud.svg" alt="Icon">
+						<p>waiting for a new round</p>
+					</div>
+					<canvas width="500" height="500" class="ctx"></canvas>
+				</div>
+			</div>
+			<div class="game__footer footer-aviator">
+				<div class="footer-aviator__body">
+					<div class="footer-aviator__bet-box">
+						<div class="footer-aviator__buttons">
+							<div class="footer-aviator__button-box-auto">
+								<span></span>
+								<div data-footer-button="auto" class="footer-aviator__button">
+									<p>Autobet</p>
+								</div>
+							</div>
+							<div class="footer-aviator__current-bet">
+								<span>x</span>
+								<p class="footer-aviator__current-bet-coeff">2.0</p>
+							</div>
+						</div>
+						<div class="footer-aviator__bet">
+							<div class="footer-aviator__block-bet block-bet">
+								<div class="block-bet__body">
+									<div class="block-bet__controls">
+										<div data-button="bet-minus" class="block-bet__minus">-</div>
+										<div class="block-bet__bet">
+											<div class="block-bet__coins _bet">50</div>
+											<div class="block-bet__icon icon-game"><span></span></div>
+										</div>
+										<div data-button="bet-plus" class="block-bet__plus">+</div>
+									</div>
+									<div class="block-bet__btns">
+										<div data-bet="50" class="block-bet__btn">
+											<p>+50</p>
+										</div>
+										<div data-bet="100" class="block-bet__btn">
+											<p>+100</p>
+										</div>
+										<div data-bet="200" class="block-bet__btn">
+											<p>+200</p>
+										</div>
+										<div data-bet="500" class="block-bet__btn">
+											<p>+500</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="footer-aviator__button-bet">
+								<p>Bet</p>
+							</div>
+						</div>
+					</div>
+					<div class="footer-aviator__cash-out-box">
+						<div class="footer-aviator__button-cash _hold">
+							<p>win</p>
+							<div class="footer-aviator__current-count">0</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Betting-112"
+})
+
+<body>
+	<div class="wrapper">
+		<div class="wrapper__body">
+			<div class="wrapper__main main">
+				<div class="main__body">
+					<div class="main__hero"> <img src="@img/other/hero-1.png" alt="Image"> </div>
+					<div class="main__actions">
+						@@include('html/_score-box.htm',{"parent":"main__score-box"})
+						<div class="main__buttons">
+							<button type="button" data-button="characters"
+								class="main__button button _fz-24 _fw-800 _italic _upper"><span>Play</span></button>
+							<button type="button" data-button="shop"
+								class="main__button button _fz-24 _fw-800 _italic _upper"><span>Shop</span></button>
+							<button type="button" data-button="privacy"
+								class="main__button button _fz-20 _fw-800 _italic _upper"><span>Privacy
+									Policy</span></button>
+						</div>
+					</div>
+					<div class="main__hero"> <img src="@img/other/hero-2.png" alt="Image"> </div>
+				</div>
+			</div>
+
+			<div class="wrapper__characters characters">
+				<div class="characters__body">
+					<div class="characters__header header">
+						<div class="header__body">
+							<button type="button" data-button="characters-home" class="header__button button-home"></button>
+							@@include('html/_score-box.htm',{"parent":"main__score-box"})
+						</div>
+					</div>
+					<div class="characters__items">
+						<div data-character="1" class="characters__item item-characters">
+							<div class="item-characters__body">
+								<div class="item-characters__image">
+									<img src="@img/characters/character-1.png" alt="Image">
+								</div>
+								<button type="button" data-button="play"
+									class="item-characters__button"><span>Play</span></button>
+							</div>
+						</div>
+						<div data-character="2" class="characters__item item-characters">
+							<div class="item-characters__body">
+								<div class="item-characters__image">
+									<img src="@img/characters/character-2.png" alt="Image">
+								</div>
+								<button type="button" data-button="play"
+									class="item-characters__button"><span>Play</span></button>
+							</div>
+						</div>
+						<div data-character="3" class="characters__item item-characters">
+							<div class="item-characters__body">
+								<div class="item-characters__image">
+									<img src="@img/characters/character-3.png" alt="Image">
+								</div>
+								<button type="button" data-button="play"
+									class="item-characters__button"><span>Play</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrapper__game game">
+				<div class="game__body">
+					<div class="game__header header">
+						<div class="header__body">
+							<button type="button" data-button="game-home" class="header__button button-home"></button>
+							<div class="header__display display">
+								<div class="display__body">
+									<div class="display__points">
+										<div class="display__row _1">
+											<span>You</span>
+											<div class="display__game-score">0/0</div>
+										</div>
+										<div class="display__row _2">
+											<span>Target</span>
+											<div class="display__length">0</div>
+										</div>
+									</div>
+									<div class="display__balls">
+										<div class="display__box">
+											<div data-point="win" class="display__point">0</div>
+											<span>TO WIN</span>
+										</div>
+										<div class="display__box">
+											<div data-point="balls" class="display__point">0</div>
+											<span>BALLS</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							@@include('html/_score-box.htm',{"parent":"header__score-box"})
+						</div>
+					</div>
+
+					<div class="game__players players-game">
+						<div class="players-game__body">
+							<div data-player="1" class="players-game__item item-players-game">
+								<div class="item-players-game__body">
+									<div class="item-players-game__image">
+										<img src="@img/characters/character-3.png" alt="Image">
+									</div>
+									<div class="item-players-game__name-box">
+										<div class="item-players-game__name">Player 03</div>
+									</div>
+								</div>
+							</div>
+							<div data-player="2" class="players-game__item item-players-game">
+								<div class="item-players-game__body">
+									<div class="item-players-game__image">
+										<img src="@img/characters/character-2.png" alt="Image">
+									</div>
+									<div class="item-players-game__name-box">
+										<div class="item-players-game__name">Player 02</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="game__chances chances">
+						<div class="chances__body">
+							<div data-chance="0" class="chances__chance item-chance">
+								<div class="item-chance__body">
+									<div class="item-chance__percent-box percent-box">
+										<div class="percent-box__rect">
+											<div class="percent-box__rect-inner"></div>
+										</div>
+										<div class="percent-box__count">0%</div>
+									</div>
+									<div class="item-chance__square">
+										<span>0</span>
+									</div>
+								</div>
+							</div>
+							<div data-chance="1" class="chances__chance item-chance">
+								<div class="item-chance__body">
+									<div class="item-chance__percent-box percent-box">
+										<div class="percent-box__rect">
+											<div class="percent-box__rect-inner"></div>
+										</div>
+										<div class="percent-box__count">0%</div>
+									</div>
+									<div class="item-chance__square">
+										<span>1</span>
+									</div>
+								</div>
+							</div>
+							<div data-chance="2" class="chances__chance item-chance">
+								<div class="item-chance__body">
+									<div class="item-chance__percent-box percent-box">
+										<div class="percent-box__rect">
+											<div class="percent-box__rect-inner"></div>
+										</div>
+										<div class="percent-box__count">0%</div>
+									</div>
+									<div class="item-chance__square">
+										<span>2</span>
+									</div>
+								</div>
+							</div>
+							<div data-chance="3" class="chances__chance item-chance">
+								<div class="item-chance__body">
+									<div class="item-chance__percent-box percent-box">
+										<div class="percent-box__rect">
+											<div class="percent-box__rect-inner"></div>
+										</div>
+										<div class="percent-box__count">0%</div>
+									</div>
+									<div class="item-chance__square">
+										<span>3</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="game__balls balls">
+						<div data-ball="1" class="balls__ball"></div>
+						<div data-ball="2" class="balls__ball"></div>
+						<div data-ball="3" class="balls__ball"></div>
+						<div data-ball="4" class="balls__ball"></div>
+					</div>
+				</div>
+			</div>
+
+			@@include('html/_shop.htm',{})
+
+		</div>
+	</div>
+
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

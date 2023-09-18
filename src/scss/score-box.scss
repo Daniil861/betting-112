@@ -1,0 +1,48 @@
+.score-box {
+	display: flex;
+	justify-content: center;
+	// .score-box__body
+
+	&__body {
+		position: relative;
+		z-index: 5;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 5px;
+
+		min-width: 95px;
+		height: 25px;
+
+		border-radius: 18.5px;
+		border: 1px solid #fff;
+		background: rgba(35, 35, 35, 0.59);
+
+		padding-inline: 5px;
+
+		&._hold {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+	}
+	&__icon {
+	}
+
+	// .score-box__score
+	&__score {
+		min-width: 40px;
+		text-align: center;
+		color: #fff;
+	}
+}
+
+.icon-game {
+	width: 28px;
+	height: 16px;
+
+	background-image: url("@img/icons/coin.png");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}

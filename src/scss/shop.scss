@@ -1,0 +1,160 @@
+.shop {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	min-height: 100%;
+
+	transform: scale(1.01);
+
+	opacity: 0;
+	visibility: hidden;
+
+	transition: all 0.7s ease 0.3s;
+
+	._shop & {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+
+	// .shop__body
+
+	&__body {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 15px;
+
+		width: 100%;
+		min-height: 100vh;
+		height: 100vh;
+
+		padding: 24px 14px;
+
+		overflow-y: auto;
+	}
+
+	&__header {
+		position: absolute;
+		top: 18px;
+		left: 0;
+		width: 100%;
+
+		padding-inline: 25px;
+	}
+
+	&__items {
+		display: flex;
+		column-gap: 30px;
+	}
+
+	// .shop__item
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 10px;
+
+		transition: all 0.7s ease 0s;
+	}
+
+	&__image-box {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		row-gap: 20px;
+
+		width: 161px;
+		height: 205px;
+
+		border-radius: 10px;
+		border: 1px solid #fff;
+		background: linear-gradient(180deg, #20062c 0%, rgba(32, 7, 44, 0.25) 100%);
+
+		span {
+			color: #fff;
+			text-align: center;
+			font-size: 12px;
+			font-weight: 600;
+			line-height: normal;
+			text-transform: uppercase;
+		}
+	}
+
+	&__price-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 10px;
+
+		min-width: 95px;
+		height: 25px;
+
+		border-radius: 7px;
+		border: 1px solid #fff;
+		background: rgba(45, 45, 45, 0.88);
+
+		transition: all 0.7s ease 0s;
+
+		// ._bought & {
+		// 	display: none;
+		// }
+	}
+
+	&__icon {
+		width: 28px;
+		height: 16px;
+
+		background-image: url("@img/icons/coin.png");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__price {
+		color: #fff;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	&__button {
+		position: relative;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 100%;
+		height: 53px;
+
+		border-radius: 10px;
+		background: #df2603;
+
+		color: #fff;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: normal;
+
+		transition: all 0.3s ease 0s;
+
+		// ._selected & {
+		// 	background: linear-gradient(180deg, #d7aff6 0%, #ab6be0 23.75%, #ba73f4 47.19%, #994fda 70.1%, #6d30a7 100%);
+		// }
+		&._hold {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+	}
+}

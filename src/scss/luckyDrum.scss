@@ -1,0 +1,404 @@
+.drum-game {
+	position: absolute;
+	z-index: 6;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(20px);
+	transition: all 0.7s ease 0.3s;
+
+	._drum & {
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(0);
+	}
+
+	// .drum-game__body
+
+	&__body {
+		position: relative;
+
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		width: 100%;
+		height: 100%;
+
+		padding: 10px;
+	}
+
+	// .drum-game__button
+
+	&__button {
+		position: absolute;
+		z-index: 5;
+		top: 15px;
+		left: 10px;
+	}
+
+	&__circle {
+		flex: 1 1 auto;
+	}
+
+	&__actions {
+		padding-bottom: 95px;
+		@media (max-height: 700px) {
+			padding-bottom: 40px;
+		}
+
+		@media (max-width: 610px) {
+			transform: scale(0.8) translateX(-60px);
+		}
+	}
+}
+
+.drum {
+	width: 100%;
+	height: 100%;
+
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(10px);
+	pointer-events: none;
+	transition: all 0.6s ease 0s;
+
+	._drum & {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+		pointer-events: fill;
+	}
+	// .drum__body
+
+	&__body {
+		position: relative;
+		z-index: 3;
+		display: flex;
+		flex-direction: column;
+
+		min-height: 100vh;
+
+		background-image: radial-gradient(80.13% 50% at 50% 50%, #d300d8 0%, #03007e 100%);
+	}
+
+	// .drum__header
+
+	&__header {
+	}
+
+	&__circle {
+		margin-bottom: 15px;
+	}
+}
+
+.circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// .circle__body
+
+	&__body {
+		position: relative;
+
+		@media (max-width: 610px) {
+			transform: scale(0.8);
+		}
+		@media (min-width: 700px) and (min-height: 700px) {
+			transform: scale(1.5);
+		}
+	}
+
+	// .circle__arrow
+
+	&__arrow {
+		position: absolute;
+		top: 15px;
+		left: 50%;
+		transform: translate(-50%, -30%);
+		width: 46px;
+		height: 76px;
+		background: url("@img/other/pin.png") center / contain no-repeat;
+		z-index: 6;
+		pointer-events: none;
+	}
+
+	&__dot {
+		position: absolute;
+		bottom: 17px;
+		z-index: 5;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 5px;
+		height: 5px;
+		// background-color: green;
+	}
+
+	// .circle__drum-box
+
+	&__drum-box {
+		position: relative;
+		min-width: 310px;
+		width: 310px;
+	}
+
+	// .circle__drum
+
+	&__drum {
+		position: relative;
+		width: 100%;
+		img {
+			width: 100%;
+		}
+		// &::before {
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: 50%;
+		// 	left: 50%;
+		// 	transform: translate(-50%, -50%);
+		// 	width: 80%;
+		// 	height: 80%;
+		// 	border-radius: 50%;
+		// 	border: 5px solid #000;
+		// }
+	}
+
+	// .circle__values
+
+	&__values {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	// .circle__value
+
+	&__value {
+		position: absolute;
+		width: 67px;
+		height: 90px;
+
+		user-select: none;
+		// border: 1px solid #000;
+
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(-90deg);
+
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 1;
+			pointer-events: none;
+			color: #fff;
+			text-transform: uppercase;
+		}
+
+		// .circle__value_1
+
+		&_1 {
+			transform: rotate(0deg);
+			top: 40px;
+			right: 122px;
+		}
+
+		// .circle__value_2
+
+		&_2 {
+			transform: rotate(36deg);
+			top: 53px;
+			right: 81px;
+		}
+
+		// .circle__value_3
+
+		&_3 {
+			transform: rotate(72deg);
+			top: 87px;
+			right: 51px;
+		}
+
+		// .circle__value_4
+
+		&_4 {
+			transform: rotate(108deg);
+			top: 132px;
+			right: 56px;
+		}
+
+		// .circle__value_5
+
+		&_5 {
+			transform: rotate(144deg);
+			top: 165px;
+			right: 82px;
+		}
+
+		// .circle__value_6
+
+		&_6 {
+			transform: rotate(180deg);
+			top: 179px;
+			right: 122px;
+		}
+
+		// .circle__value_7
+
+		&_7 {
+			transform: rotate(216deg);
+			top: 165px;
+			right: 163px;
+		}
+
+		// .circle__value_8
+
+		&_8 {
+			transform: rotate(252deg);
+			top: 132px;
+			right: 187px;
+		}
+
+		// .circle__value_9
+
+		&_9 {
+			transform: rotate(288deg);
+			top: 89px;
+			right: 187px;
+		}
+
+		// .circle__value_10
+
+		&_10 {
+			transform: rotate(324deg);
+			top: 54px;
+			right: 163px;
+		}
+
+		// .circle__value_11
+
+		&_11 {
+			transform: rotate(60deg);
+			top: 20px;
+			right: 185px;
+		}
+
+		// .circle__value_12
+
+		&_12 {
+			transform: rotate(90deg);
+			top: 16px;
+			right: 129px;
+		}
+	}
+
+	&__button-box {
+		position: absolute;
+		bottom: -60px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		justify-content: center;
+	}
+
+	&__button {
+		width: 200px;
+		height: 48px;
+
+		&._hold {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+	}
+}
+
+.actions-drum-game {
+	// .actions-drum-game__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 20px;
+
+		min-height: 100%;
+		padding-top: 40px;
+	}
+
+	// .actions-drum-game__bet-box
+
+	&__bet-box {
+	}
+
+	// .actions-drum-game__button-box
+
+	&__button-box {
+		display: flex;
+		justify-content: center;
+		column-gap: 40px;
+	}
+
+	// .actions-drum-game__button
+
+	&__button {
+		position: relative;
+		width: 170px;
+		height: 119px;
+
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		transition: all 0.3s ease 0s;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			font-size: 23.111px;
+			font-weight: 900;
+			line-height: 120%;
+			text-transform: uppercase;
+		}
+		&[data-lucky="green"] {
+			background-image: url("@img/icons/button-gr.png");
+			&::before {
+				content: "ЗЕЛЕНЫЙ";
+				color: #00a607;
+			}
+		}
+		&[data-lucky="red"] {
+			background-image: url("@img/icons/button-red.png");
+			&::before {
+				content: "Красный";
+				color: #cc0000;
+			}
+		}
+		&._hold {
+			pointer-events: none;
+		}
+		&._active {
+			opacity: 0.5;
+		}
+		&:active {
+			transform: translateY(2px);
+		}
+
+		@media (max-width: 700px) {
+			width: calc(170px * 0.7);
+			height: calc(119px * 0.7);
+			&::before {
+				font-size: 16px;
+			}
+		}
+	}
+}

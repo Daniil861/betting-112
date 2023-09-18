@@ -1,0 +1,201 @@
+.snake-game {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	display: flex;
+
+	width: 100%;
+	height: 100%;
+
+	transform: translateX(5px);
+
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+
+	transition: all 0.7s ease 0.3s;
+
+	._game & {
+		opacity: 1;
+		visibility: visible;
+		transform: translateX(0);
+		pointer-events: fill;
+	}
+	// .game__body
+
+	&__body {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		row-gap: 15px;
+		width: 100%;
+
+		background-image: url("@img/other/bg-1.png");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	// .game__header
+
+	&__header {
+		padding: 18px 60px 0 24px;
+	}
+}
+
+.field {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex: 1 1 auto;
+	&__body {
+		position: relative;
+		display: flex;
+		width: 100%;
+
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: 105;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			background-color: rgba(255, 220, 175, 0.95);
+			transform: scale(0.5);
+			opacity: 0;
+			transition: all 0.3s ease 0s;
+		}
+
+		&._level-up {
+			&::before {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+	}
+
+	&__worm {
+	}
+
+	&__fruit {
+		position: absolute;
+		top: 0;
+		left: 0;
+		&[data-fruit="1"] {
+			img {
+				max-width: 26px;
+			}
+		}
+		&[data-fruit="2"] {
+			img {
+				max-width: 31px;
+			}
+		}
+		&[data-fruit="3"] {
+			img {
+				max-width: 30px;
+			}
+		}
+	}
+}
+
+.worm {
+	&__body {
+	}
+
+	&__head {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		[data-color="blue"] & {
+			background-image: url("@img/worm/body-blue.png");
+		}
+		[data-color="purple"] & {
+			background-image: url("@img/worm/body-purple.png");
+		}
+		[data-color="yellow"] & {
+			background-image: url("@img/worm/body-yellow.png");
+		}
+	}
+	&__mouth {
+		position: absolute;
+		top: 50%;
+		right: 10%;
+		transform: translateY(-50%);
+
+		width: 12px;
+		height: 16px;
+		background-image: url("@img/worm/mouth.png");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__eyes {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 20%;
+
+			width: 8px;
+			height: 8px;
+
+			background-image: url("@img/worm/eye.png");
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		&::before {
+			top: 20%;
+		}
+		&::after {
+			bottom: 20%;
+		}
+	}
+
+	&__link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		[data-color="blue"] & {
+			background-image: url("@img/worm/body-blue.png");
+		}
+		[data-color="purple"] & {
+			background-image: url("@img/worm/body-purple.png");
+		}
+		[data-color="yellow"] & {
+			background-image: url("@img/worm/body-yellow.png");
+		}
+	}
+}

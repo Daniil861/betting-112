@@ -1,0 +1,173 @@
+body::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+.popup-show body::after {
+	opacity: 1;
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	transition: all 0.3s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
+	opacity: 0;
+	transform: translateX(100%);
+	background-color: #16161e;
+
+	&_show {
+		z-index: 150;
+		visibility: visible;
+		overflow: auto;
+		pointer-events: auto;
+
+		visibility: visible;
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100%;
+		flex: 1 1 auto;
+		width: 100%;
+	}
+
+	&__header {
+		width: 100%;
+	}
+
+	&__content {
+		transition: all 0.3s ease 0s;
+
+		flex: 1 1 auto;
+
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+		width: 100%;
+
+		padding-block: 28px 100px;
+		padding-inline: 20px;
+		.lock & {
+			visibility: visible;
+		}
+	}
+
+	&__close {
+	}
+
+	&__header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 25px;
+		margin-bottom: 25px;
+	}
+
+	&__button {
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__image {
+		display: flex;
+		justify-content: center;
+
+		margin-bottom: 18px;
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__text {
+		color: #fff;
+
+		margin-bottom: 15px;
+		p {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__list {
+		margin-bottom: 15px;
+	}
+
+	&__list {
+		li {
+			position: relative;
+			padding-left: 15px;
+
+			&::before {
+				content: ".";
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	&__sub-list {
+		li {
+			position: relative;
+			display: inline-block;
+			padding-left: 15px;
+
+			&::before {
+				content: attr(data-attr);
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				color: #000;
+			}
+		}
+	}
+
+	&__next-list {
+		padding-left: 10px;
+		li {
+			position: relative;
+			display: inline-block;
+			padding-left: 15px;
+
+			&::before {
+				content: attr(data-attr);
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				color: #000;
+			}
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		row-gap: 31px;
+
+		padding-bottom: 100px;
+	}
+}

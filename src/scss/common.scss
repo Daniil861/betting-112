@@ -1,0 +1,84 @@
+.button {
+	position: relative;
+	z-index: 1;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 192px;
+	height: 53px;
+
+	border-radius: 10px;
+	background: linear-gradient(180deg, #ffda0d 0%, #fb8741 100%);
+	box-shadow: 0px 4px 0px 0px #d36438, 3px -1px 0px 0px rgba(255, 255, 255, 0.25) inset,
+		-2px 3px 0px 0px rgba(255, 255, 255, 0.25) inset;
+
+	user-select: none;
+	&:active {
+		transform: translateY(3px);
+		box-shadow: 0px 1px 0px 0px #d36438, 3px -1px 0px 0px rgba(255, 255, 255, 0.25) inset,
+			-2px 3px 0px 0px rgba(255, 255, 255, 0.25) inset;
+	}
+
+	span {
+		position: relative;
+		color: #fff;
+		text-shadow: 0px 4px 1px rgba(1, 0, 0, 0.86);
+	}
+}
+
+.button-home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 34px;
+	height: 34px;
+
+	border-radius: 5px;
+	background: url("@img/icons/arrow-left.png") center / 60% no-repeat,
+		linear-gradient(180deg, #fd7371 0%, #f16d6d 59.37%, #ca2525 100%);
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.51), 0px 2px 0px 0px #a50000;
+}
+
+[type="button"] {
+	transition: all 0.3s ease 0s;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	&:active {
+		transform: translateY(3px);
+	}
+}
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+
+.score {
+	white-space: nowrap;
+	&._no-money {
+		animation: no-money 0.7s ease 2;
+	}
+	&._delete-money {
+		animation: delete-money 0.7s ease;
+	}
+	&._anim-add-money {
+		animation: add-money 0.5s ease 3;
+	}
+}
+
+.icon-game {
+	&._anim-icon-jump {
+		animation: jump_icon 5s ease;
+	}
+	&._anim-icon-scale {
+		animation: scale_icon 0.5s ease 2;
+	}
+	&._anim-icon-rotate {
+		animation: rotate_icon 1.5s ease-out 1;
+	}
+	&._anim-icon-rotate-2 {
+		animation: rotate_icon-2 1.5s ease 1;
+	}
+}
+//========================================================================================================================================================

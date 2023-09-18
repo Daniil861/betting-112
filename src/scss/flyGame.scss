@@ -1,0 +1,116 @@
+.fly-game {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	display: flex;
+
+	width: 100%;
+	height: 100%;
+
+	transform: translateY(-20px);
+
+	opacity: 0;
+	z-index: -1;
+
+	transition: all 0.7s ease 0.3s;
+
+	._fly & {
+		opacity: 1;
+		z-index: 10;
+		transform: translateY(0);
+	}
+	// .game__body
+
+	&__body {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		row-gap: 15px;
+		width: 100%;
+		min-height: 100%;
+
+		background-image: radial-gradient(107.02% 144.42% at 3.75% 0%, #15104c 0%, #15104c 0.01%, #0b0934 100%);
+	}
+
+	// .game__header
+
+	&__header {
+		padding-top: 30px;
+		margin-right: 15px;
+	}
+
+	&__prompt {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		color: #fff;
+		white-space: nowrap;
+
+		opacity: 0;
+		visibility: hidden;
+
+		._new-round & {
+			opacity: 1;
+			visibility: visible;
+			transition: all 0.3s ease 0s;
+		}
+	}
+
+	// .game__info
+
+	&__info {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__count-box {
+		position: relative;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 125px;
+		height: 40px;
+
+		border-radius: 34px;
+		background-color: #0c0932;
+		color: #fff;
+
+		margin-right: 15px;
+		transition: all 0.3s ease 0s;
+		._new-round & {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&__player {
+		position: absolute;
+		bottom: 20%;
+		left: 50%;
+		transform: translateX(-50%);
+		img {
+			max-width: 130px;
+			max-height: 130px;
+			transform: rotate(-45deg);
+		}
+		transition: all 0.15s ease 0s;
+
+		._new-round & {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&__footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+}
